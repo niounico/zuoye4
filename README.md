@@ -42,10 +42,12 @@ cmake --build build
 
 ## 串口运行结果
 
-USART1 配置为 115200、8 数据位、无校验、1 停止位，接收使用文本模式。每条记录包含 Target、CCR 和 Pulse。90° 时预期输出如下：
+USART1 配置为 115200、8 数据位、无校验、1 停止位，接收使用文本模式。每条记录包含 Target、CCR 和 Pulse。实测中，90° 对应 CCR 1500，脉宽为 1.500 ms。
 
 ```text
 Target= 90  CCR=1500  Pulse=1.500ms
 ```
+
+![串口助手接收区显示五个目标角度及各自的 CCR 与脉宽](docs/uart-output.jpg)
 
 [串口实测记录](docs/README.md)
